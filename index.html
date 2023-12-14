@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Sam Loniello</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="Styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+
+    <div class="sidebar">
+        <a class="active" href="#" onclick="showContent('welcome')">Welcome</a>
+        <a href="#" onclick="showContent('About me')">About</a>
+        <a href="#" onclick="showContent('poems')">Poems</a>
+        <a href="#" onclick="showContent('projects')">Projects</a>
+        <a href="#" onclick="showContent('blog')">Blog</a>
+        <a href="#" onclick="showContent('contact')">Contact</a>
+    </div>
+
+    <div id="welcome" class="content">
+        <h2>Welcome!</h2>
+        <p>This is a constant work in progress. Some days this may not exist only to reemerge in a new form.</p>
+        <p>Any feedback is greatly appreciated!</p>
+        <p>
+            Til Valhallar,<br>
+            Algiz, The Elk
+        </p>
+    </div>
+    <div id="About" class="content">
+        <h2>Sam Loniello</h2>
+        <p>12 Year combat medic going to school for cyber stuff. </p>
+        <p>I'll write some more later...</p>
+    </div>
+
+    <div id="poems" class="content" style="display: none;">
+        <h2>Poems</h2>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vTzeikHcD4a6KQ3kQ_aQF_18B7xKy8dUv-Bhl3wB9FNhdmLgypRY_8NP9qR8ENTFA/pub?embedded=true" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="projects" class="content" style="display: none;">
+        <h2>Projects</h2>
+        <h3>click something</h3>
+        <div class="project-thumbnails">
+            <a href="https://github.com/SamLoniello/DOS.git"><img src="images/ioncannon.jpg" alt="dDOS script"></a>
+            <a href="project2-details.html"><img src="project2-thumbnail.jpg" alt="Project 2"></a>
+            <!-- Add more project thumbnails as needed -->
+        </div>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Contact</h2>
+        <h3>I shall add more ways to contact... later... probably.</h3>
+        <p>You can contact me via email at: <a href="mailto:your_Sam.Loniello@gmail.com">Sam.Loniello@gmail.com</a></p>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
