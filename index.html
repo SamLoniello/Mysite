@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta charset="UTF-8">
-        <title>Sam Loniello</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="Styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Sam Loniello</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.13/dist/shoelace/shoelace.esm.js"></script>
+    <style type="text/css">
+    </style>
 </head>
 <body>
+    <sl-drawer label="Welcome!" placement="left" class="drawer-placement-left">
+        <sl-menu>
+            <sl-menu-item id="about" onclick="loadContent('about')">
+                <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+                About
+            </sl-menu-item>
+            <sl-menu-item id="blog" onclick="loadContent('blog')">
+                <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+                Blog
+            </sl-menu-item>
+            <sl-menu-item id="poems" onclick="loadContent('poems')">
+                <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+                Poems
+            </sl-menu-item>
+            <sl-menu-item id="projects" onclick="loadContent('projects')">
+                <sl-icon slot="prefix" name="link-45deg"></sl-icon>
+                Projects
+            </sl-menu-item>
+        </sl-menu>
+    </sl-drawer>
+    <sl-button>Menu</sl-button>
 
-    <div class="sidebar">
-        <a class="active" href="#" onclick="showContent('welcome')">Welcome</a>
-        <a href="#" onclick="showContent('About me')">About</a>
-        <a href="#" onclick="showContent('poems')">Poems</a>
-        <a href="#" onclick="showContent('projects')">Projects</a>
-        <a href="#" onclick="showContent('blog')">Blog</a>
-        <a href="#" onclick="showContent('contact')">Contact</a>
-    </div>
+    <div id="content"></div>
 
-    <div id="welcome" class="content">
-        <h2>Welcome!</h2>
-        <p>This is a constant work in progress. Some days this may not exist only to reemerge in a new form.</p>
-        <p>Any feedback is greatly appreciated!</p>
-        <p>
-            Til Valhallar,<br>
-            Algiz, The Elk
-        </p>
-    </div>
-    <div id="About" class="content">
-        <h2>Sam Loniello</h2>
-        <p>12 Year combat medic going to school for cyber stuff. </p>
-        <p>I'll write some more later...</p>
-    </div>
+    <iframe id="poem-iframe" src="https://docs.google.com/document/d/e/2PACX-1vS1B1VbM5OWHYnU6IMUGjuwgCcifQ9uxzMp2RYSO0YHtFhsR-pY6O3na0IAes5a9ogI86GRPExAMFJO/pub?rm=minimal" style="width: 100%; height: 100%"></iframe>
 
-    <div id="poems" class="content" style="display: none;">
-        <h2>Poems</h2>
-        <div class="iframe-container">
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vTzeikHcD4a6KQ3kQ_aQF_18B7xKy8dUv-Bhl3wB9FNhdmLgypRY_8NP9qR8ENTFA/pub?embedded=true" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
+    <script src="script.js"></script>
 
-    <div id="projects" class="content" style="display: none;">
-        <h2>Projects</h2>
-        <h3>click something</h3>
-        <div class="project-thumbnails">
-            <a href="https://github.com/SamLoniello/DOS.git"><img src="images/ioncannon.jpg" alt="dDOS script"></a>
-            <a href="project2-details.html"><img src="project2-thumbnail.jpg" alt="Project 2"></a>
-            <!-- Add more project thumbnails as needed -->
-        </div>
-    </div>
-
-    <div id="contact" class="content">
-        <h2>Contact</h2>
-        <h3>I shall add more ways to contact... later... probably.</h3>
-        <p>You can contact me via email at: <a href="mailto:your_Sam.Loniello@gmail.com">Sam.Loniello@gmail.com</a></p>
-    </div>
-
-    <script src="script.js" defer></script>
 </body>
 </html>
