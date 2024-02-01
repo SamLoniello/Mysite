@@ -65,7 +65,7 @@ sl-menu-item::part(base) {
     height: 100%;
     border: none;
     display: none;
-    min-height: 1500px;
+    min-height: 100%;
 }
 
 /* Content Sections */
